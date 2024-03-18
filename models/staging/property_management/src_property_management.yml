@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: property_management
+    database: raw
+    schema: property_management
+    tables:
+      - name: properties
+      - name: leases
+      - name: units
+      - name: rental_applications
