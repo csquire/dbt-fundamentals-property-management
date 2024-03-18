@@ -4,8 +4,13 @@ sources:
   - name: property_management
     database: raw
     schema: property_management
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}
     tables:
       - name: properties
       - name: leases
+        description: "Raw lease data"
       - name: units
+        description: "Raw unit data"
       - name: rental_applications
