@@ -1,7 +1,7 @@
 with
     leases as (
         select     
-            id as lease_id,
+            lease_id,
             created_at as lease_created_at,
             unit_id,
             start_date as lease_start_date,
@@ -13,13 +13,13 @@ with
     ),
     units as (
         select 
-            id as unit_id,
+            unit_id,
             property_id 
         from {{ ref("stg_units") }}
     ),
     rental_applications as (
         select 
-            id as rental_application_id,
+            rental_application_id,
             created_at as rental_application_created_at,
             deleted_at as rental_application_deleted_at,
             status as rental_application_status,
